@@ -1,0 +1,46 @@
+
+<body>
+<a href="{% url 'home' %}">Return to home page</a>
+<!-- <h1>{{ count }} words were sent to Terminal</h1> -->
+<!-- 'count' is key of len(wordlist) in views.py count()'s dictionary -->
+<div style="padding-left:200px;">
+<p>Our prediction vaue:</p>
+
+{{ prediction }}%
+
+</div>
+<h1>Place Location in Map:</h1>
+
+
+<div id="map" style="width:80%;height:500px; padding-left:200px;"></div>
+
+
+
+
+<script>
+
+  function myMap() {
+    var myCenter = new google.maps.LatLng({{lat}},{{lon}});
+    var mapCanvas = document.getElementById("map");
+    var mapOptions = {center: myCenter, zoom: 5};
+    var map = new google.maps.Map(mapCanvas, mapOptions);
+    var marker = new google.maps.Marker({position:myCenter});
+    marker.setMap(map);
+    map.setZoom(15);
+    // Zoom to 9 when clicking on marker
+    google.maps.event.addListener(marker,'click',function() {
+      map.setZoom(9);
+      map.setCenter(marker.getPosition());
+    });
+  }
+
+</script>
+</script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC5Ed9wVC6_VoDRhIJoEfqNSJtPU4VnC08&callback=myMap">
+    </script> -->
+</body>
+<!--
+  {% for word, counttotal in worddictionary %}
+    <p>{{ word }} - {{ counttotal }</p>
+  {% endfor %} -->

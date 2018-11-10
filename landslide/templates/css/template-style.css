@@ -1,0 +1,33 @@
+nav {
+  padding: 0.825rem 0;
+}
+#first-block, #second-block, #third-block, #fourth-block {
+  padding:4.5rem 0;
+}
+#carousel {
+  background:#f8f8f8;
+}
+#first-block {
+  background:#fff;
+}
+#second-block {
+  background:#f8f8f8;
+}
+#third-block {
+  background:#fff;
+}
+#fourth-block {
+  background:#f8f8f8;
+}
+footer {
+  background:#fff;
+  padding:3.5rem 0;
+}
+@media screen and (max-width: 768px) {
+  .right {
+  float:none;
+  }
+  nav {
+    padding: 0;
+  }
+}

@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8">
+</head>
+<body style="padding-left:100px;">
+
+<div class="header" >
+<div class="header-1" >
+  <h2 style="height:100px;weight:100% background-color:#150F6F; padding-left:450px;">Landslide Prediction</h2>
+  </div>
+<div >
+
+  </div
+  </div>
+
+
+<div style="padding-left:450px;">
+<form class="" action="{% url 'count' %}" method=""> <!-- url info matches name in urls.py
+  so if you change name of file, it still loads because urls.py has name= to refer to -->
+
+  <input type="text" name="text"  style="padding:10px;height:40px;font-size:15px; font:Arial; margin:10px; width:300px;" placeholder="Please insert a place" required/>
+  <br />
+  <input type="text" name="city"  style="padding:10px;height:40px;font-size:15px; font:Arial; margin:10px; width:300px;" placeholder="Please insert city" required/>
+  <br />
+  <input type="int" name="day" style="padding:10px;height:40px;font-size:15px; font:Arial; margin:10px; width:300px;" placeholder="Number of day" required/>
+  <br />
+  <input type="submit" name="" value="Predict"  style="padding:10px;height:40px;font-size:15px; font:Arial; margin:10px; width:325px;"/>
+</form>
+</div>
+<!--
+<h4>Select a location:</h4>
+<div id="map" style="width:80%;height:500px; padding-left:200px;"></div>
+
+
+
+
+<script>
+
+function myMap() {
+  var mapCanvas = document.getElementById("map");
+  var myCenter=new google.maps.LatLng(23.8103,90.4125);
+  var mapOptions = {center: myCenter, zoom: 10};
+  var map = new google.maps.Map(mapCanvas, mapOptions);
+  google.maps.event.addListener(map, 'click', function(event) {
+    placeMarker(map, event.latLng);
+  });
+
+}
+
+function placeMarker(map, location) {
+  var marker = new google.maps.Marker({
+    position: location,
+    map: map
+  });
+  window.location.href = "http://localhost/map2.php?lat="+location.lat()+"&lon="+location.lng();
+  var infowindow = new google.maps.InfoWindow({
+    content: 'Latitude: ' + location.lat() + '<br>Longitude: ' + location.lng()
+  });
+  infowindow.open(map,marker);
+}
+
+</script>
+</script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC5Ed9wVC6_VoDRhIJoEfqNSJtPU4VnC08&callback=myMap">
+    </script> -->
+  </body>
+</html>
